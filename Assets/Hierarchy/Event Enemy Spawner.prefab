@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2402673493736200569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4948384684789960994}
+  - component: {fileID: 6182417459661680509}
+  m_Layer: 0
+  m_Name: Event circle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4948384684789960994
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2402673493736200569}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6778485131883144315}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6182417459661680509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2402673493736200569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ef352ff085b804f9ddf8e997b7ecc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyCircleSurroundEvent
+  circleRadius: 5
+  cameraMargin: 1.5
+  desiredArcSpacing: 0.9
+  safetyMaxEnemies: 180
+  spawnDistance: 20
+  circleMovementSpeed: 2.5
+  healthMultiplier: 2.5
+  eventDuration: 30
+  spawner: {fileID: 0}
+  player: {fileID: 0}
+  timerManager: {fileID: 0}
+  followCamera: 0
+  showDebugInfo: 0
+--- !u!1 &5756212272182523823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6778485131883144315}
+  - component: {fileID: 2301698272345086396}
+  m_Layer: 0
+  m_Name: Event Enemy Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6778485131883144315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5756212272182523823}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.88308, y: -10.44318, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4948384684789960994}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2301698272345086396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5756212272182523823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7fe291564125d44837cf3f0ddd0223, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventEnemySpawner
+  eventMode: 0
+  spawner: {fileID: 0}
+  player: {fileID: 0}
+  timerManager: {fileID: 0}
+  eventMinutes:
+  - 1
+  - 3
+  - 5
+  - 8
+  - 13
+  eventDuration: 20
+  warningDuration: 9
+  warningBlinkInterval: 0.3
+  warningLeft: {fileID: 0}
+  warningRight: {fileID: 0}
+  warningTop: {fileID: 0}
+  warningBottom: {fileID: 0}
+  spawnInterval: 0.5
+  enemiesPerWave: 3
+  spawnDistance: 15
+  enemySpacing: 1.5
+  enemyTag: Enemy
+  maxEnemiesToConvert: 20
+  searchRadius: 30
+  revertOnEnd: 0
+  healthMultiplier: 8
+  eventEnemySpeed: 5
+  circleEventPrefab: {fileID: 6182417459661680509}
+  showDebugInfo: 0
